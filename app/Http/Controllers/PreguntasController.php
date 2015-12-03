@@ -216,6 +216,7 @@ class PreguntasController extends Controller
 
         $session = Session::get('session_id');
         $getId = SaveSession::where('cookie', $session)->first()->id;        
+<<<<<<< HEAD
         $puntos = DB::table('registros')->where('session_id', $getId)->sum('valor');
 
         switch ($puntos) {
@@ -237,5 +238,29 @@ class PreguntasController extends Controller
         }
 
 
+=======
+        $suma = DB::table('registros')->where('session_id',$getId)->sum('valor');
+        $puntos = DB::table('registros')->where('session_id',$getId)->sum('valor');
+
+        switch ($puntos) {
+            case $puntos> 20 :
+                return " $puntos Eres un ExtremeCool"; 
+                break;
+            case $puntos>= 15 AND $puntos <=20:
+                return " $puntos Eres un Autentico Cool";
+                break;
+            case $puntos>= 10 AND $puntos <=14:
+                return " $puntos Eres un Frescool";
+                break;
+            case $puntos>= 5 AND $puntos <=9:
+
+                return " $puntos Eres Casual";
+                break;
+            default:
+                return "Eres Casual";
+                break;
+        }
+        return "Calcula";
+>>>>>>> 29f7afa06797cbabff941ab02932ce9bac9631b5
     }    
 }
