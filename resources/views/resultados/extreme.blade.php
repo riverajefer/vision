@@ -3,7 +3,7 @@
 
 @section('title')  @parent Hola @stop
 
-	<img src="img/extreme.jpg" id="bg" alt="">
+	<img src="{{asset('img/extreme.jpg')}}" id="bg" alt="">
 	
 	<div id="page-wrap">
 	<div class="resultado">

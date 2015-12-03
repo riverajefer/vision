@@ -3,7 +3,7 @@
 
 @section('title')  @parent ERES UN AUTÉNTICO COOL @stop
 
-	<img src="img/autentico-cool.jpg" id="bg" alt="">
+	<img src="{{asset('img/autentico-cool.jpg')}}" id="bg" alt="autentico-cool">
 	
 	<div id="page-wrap">
 	<div class="resultado">

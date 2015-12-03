@@ -12,22 +12,22 @@
 				CUANDO HACES UN REGALO, EL PRESUPUESTO:
 			</h1>
 			<ul class="lista_opciones">
-				<li id="1">
+				<li id="4">
 					<button class="myButton btnopcion" >
 						ES LO MÁS IMPORTANTE
 					</button>
 				</li>
-				<li id="2">
+				<li id="3">
 					<button class="myButton btnopcion">
 						ES UN POCO IMPORTANTE
 					</button>
 				</li>	
-				<li id="3">
+				<li id="2">
 					<button class="myButton btnopcion">
 						ES MENOS IMPORTANTE QUE LA INTENCIÓN 
 					</button>								
 				</li>
-				<li id="4">
+				<li id="1">
 					<button class="myButton btnopcion">
 						ES INSIGNIFICANTE
 					</button>								

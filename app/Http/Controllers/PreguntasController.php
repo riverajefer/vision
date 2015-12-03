@@ -213,11 +213,29 @@ class PreguntasController extends Controller
     }                
     public function calcula()
     {
+
         $session = Session::get('session_id');
         $getId = SaveSession::where('cookie', $session)->first()->id;        
-        $suma = DB::table('registros')->where('session_id',$getId)->sum('valor');
-        return $suma;
+        $puntos = DB::table('registros')->where('session_id', $getId)->sum('valor');
 
-        return "Calcula";
+        switch ($puntos) {
+            case $puntos >= 20 :
+                return redirect('perfil/extreme-cool');
+                break;
+            case $puntos >= 15 AND $puntos < 20:
+                return redirect('perfil/autentico');
+                break;
+            case $puntos >= 10 AND $puntos <= 14:
+                return redirect('perfil/fres-cool');
+                break;
+            case $puntos >= 5 AND $puntos <= 9:
+                return redirect('perfil/casual');
+                break;
+            default:
+                return redirect('perfil/casual');
+                break;
+        }
+
+
     }    
 }

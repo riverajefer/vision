@@ -3,7 +3,7 @@
 
 @section('title')  @parent ERES CASUAL @stop
 
-	<img src="img/casual.jpg" id="bg" alt="">
+	<img src="{{asset('img/casual.jpg')}}" id="bg" alt="">
 	
 	<div id="page-wrap">
 	<div class="resultado">

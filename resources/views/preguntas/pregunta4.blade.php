@@ -12,22 +12,22 @@
 				¿A CUÁNTOS CONCIERTOS HAS IDO DE TU CANTANTE FAVORITO?
 			</h1>
 			<ul class="lista_opciones">
-				<li id="1">
+				<li id="4">
 					<button class="myButton btnopcion" >
 						A MÁS DE 2 CONCIERTOS EN VIVO
 					</button>
 				</li>
-				<li id="2">
+				<li id="3">
 					<button class="myButton btnopcion">
 						A UN CONCIERTO EN VIVO
 					</button>
 				</li>	
-				<li id="3">
+				<li id="2">
 					<button class="myButton btnopcion">
 						SOLO LO HA VISTO POR T.V.
 					</button>								
 				</li>
-				<li id="4">
+				<li id="1">
 					<button class="myButton btnopcion">
 						NUNCA HA VISTO UN CONCIERTO
 					</button>								

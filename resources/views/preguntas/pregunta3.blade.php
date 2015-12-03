@@ -9,27 +9,27 @@
 
 		<div class="pregunta3">
 			<h1>
-				¿QUÉ PLAN DESCRIBE MEJOR TUS DOMINGOS?
+				¿CUÁNTO TIEMPO COMPARTES CON TUS AMIGOS?
 			</h1>
 			<ul class="lista_opciones">
-				<li id="1">
+				<li id="4">
 					<button class="myButton btnopcion" >
-						ALMORZAR EN UN RESTAURANTE
+						MÁS DE 3 DÍAS A LA SEMANA
 					</button>
 				</li>
-				<li id="2">
-					<button class="myButton btnopcion">
-						IR A CINE
-					</button>
-				</li>	
 				<li id="3">
 					<button class="myButton btnopcion">
-						SALIR A COMER HELADO
+						ALGÚN DÍA DEL FIN DE SEMANA
+					</button>
+				</li>	
+				<li id="2">
+					<button class="myButton btnopcion">
+						CADA 15 DÍAS
 					</button>								
 				</li>
-				<li id="4">
+				<li id="1">
 					<button class="myButton btnopcion">
-						QUEDARSE VIENDO PELÍCULAS EN CASA
+						MENOS DE UNA VEZ AL MES
 					</button>								
 				</li>				
 			</ul>

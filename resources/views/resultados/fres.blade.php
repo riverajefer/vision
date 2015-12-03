@@ -3,7 +3,7 @@
 
 @section('title')  @parent ERES UN FRESCOOL @stop
 
-	<img src="img/fres-cool.jpg" id="bg" alt="">
+	<img src="{{asset('img/fres-cool.jpg')}}" id="bg" alt="">
 	
 	<div id="page-wrap">
 	<div class="resultado">

@@ -14,22 +14,22 @@
 				CUANDO COMES FUERA DE CASA, VAS A:
 			</h1>
 			<ul class="lista_opciones">
-				<li id="1">
+				<li id="4">
 					<button class="myButton btnopcion" >
 						RESTAURANTE A LA CARTA
 					</button>
 				</li>
-				<li id="2">
+				<li id="3">
 					<button class="myButton btnopcion">
 						RESTAURANTE DE CADENA
 					</button>
 				</li>	
-				<li id="3">
+				<li id="2">
 					<button class="myButton btnopcion">
 						PANADERÍA O TIENDA
 					</button>								
 				</li>
-				<li id="4">
+				<li id="1">
 					<button class="myButton btnopcion">
 						CORRIENTAZO
 					</button>								
