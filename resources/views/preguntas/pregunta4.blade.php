@@ -1,7 +1,7 @@
 @extends('layouts/default')
 @section('content')
 
-@section('title')  @parent Hola @stop
+@section('title')  @parent ¿A CUÁNTOS CONCIERTOS HAS IDO DE TU CANTANTE FAVORITO? @stop
 
 	<img src="img/concierto.jpg" id="bg" alt="">
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -55,12 +55,12 @@ $(document).ready(function(){
 
 	  function envio(id){
 		$.ajax({
-		    url : "<?php echo URL::to('pregunta4'); ?>",
+		    url : "<?php echo route('pregunta4'); ?>",
 		    data : { id : id, '_token': $('input[name=_token]').val() },
 		    type : 'POST',
 		    dataType : 'json',
 		    success : function(json) {
-		    	window.location.href = "<?php echo URL::to('pregunta5')?>";
+		    	window.location.href = "<?php echo route('pregunta5')?>";
 		    },
 		    error : function(xhr, status) {
 		        console.log('Error');

@@ -58,12 +58,12 @@ $(document).ready(function(){
 
 	  function envio(id){
 		$.ajax({
-		    url : "<?php echo URL::to('pregunta1'); ?>",
+		    url : "<?php echo route('pregunta1'); ?>",
 		    data : { id : id, '_token': $('input[name=_token]').val() },
 		    type : 'POST',
 		    dataType : 'json',
 		    success : function(json) {
-		    	window.location.href = "<?php echo URL::to('pregunta2')?>";
+		    	window.location.href = "<?php echo route('pregunta2')?>";
 		    },
 		    error : function(xhr, status) {
 		        console.log('Disculpe, existió un problema');

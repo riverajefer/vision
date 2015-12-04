@@ -2,28 +2,24 @@
 use App\SaveSession;
 Route::get('/', 'PreguntasController@index');
 Route::get('home', 'PreguntasController@home');
-Route::get('empezar', 'PreguntasController@start');
 
 Route::get('empezar', 'PreguntasController@start');
 
 $router->group(['middleware' => 'filtroPregunta'], function() {
-
-    Route::get('pregunta1', 'PreguntasController@pregunta1');
-    Route::get('pregunta2', 'PreguntasController@pregunta2');
-    Route::get('pregunta3', 'PreguntasController@pregunta3');
-    Route::get('pregunta4', 'PreguntasController@pregunta4');
-    Route::get('pregunta5', 'PreguntasController@pregunta5');
-    Route::get('calcula', 'PreguntasController@calcula');
-
-
+    Route::get('cuando-comes-fuera-de-casa-vas-a', 'PreguntasController@pregunta1')->name('pregunta1');
+    Route::get('que-plan-describe-mejor-tus-domingos', 'PreguntasController@pregunta2')->name('pregunta2');
+    Route::get('cuanto-tiempo-compartes-con-tus-amigos', 'PreguntasController@pregunta3')->name('pregunta3');
+    Route::get('a-cuantos-conciertos-has-ido-de-tu-cantante-favorito', 'PreguntasController@pregunta4')->name('pregunta4');
+    Route::get('cuando-haces-un-regalo-el-presupuesto', 'PreguntasController@pregunta5')->name('pregunta5');
+    Route::get('calcula', 'PreguntasController@calcula')->name('calcula');
 });
 
 
-	Route::post('pregunta1', 'PreguntasController@postPregunta1');
-	Route::post('pregunta2', 'PreguntasController@postPregunta2');
-	Route::post('pregunta3', 'PreguntasController@postPregunta3');
-	Route::post('pregunta4', 'PreguntasController@postPregunta4');
-	Route::post('pregunta5', 'PreguntasController@postPregunta5');
+	Route::post('cuando-comes-fuera-de-casa-vas-a', 'PreguntasController@postPregunta1')->name('pregunta1');
+	Route::post('que-plan-describe-mejor-tus-domingos', 'PreguntasController@postPregunta2')->name('pregunta2');
+	Route::post('cuanto-tiempo-compartes-con-tus-amigos', 'PreguntasController@postPregunta3')->name('pregunta3');
+	Route::post('a-cuantos-conciertos-has-ido-de-tu-cantante-favorito', 'PreguntasController@postPregunta4')->name('pregunta4');
+	Route::post('cuando-haces-un-regalo-el-presupuesto', 'PreguntasController@postPregunta5')->name('pregunta5');
 	
 
 $router->group(['middleware' => 'filtroPerfil'], function() {
@@ -34,20 +30,17 @@ $router->group(['middleware' => 'filtroPerfil'], function() {
 });
 
 
-
-
 Route::get('hola', function(){
 
-        return $session = Session::get('session_id');
-         $getId = SaveSession::where('cookie', $session)->first()->id;        
-        $puntos = DB::table('registros')->where('session_id', $getId)->sum('valor');
-        return $puntos;
-
+    return $session = Session::get('session_id');
+    $getId = SaveSession::where('cookie', $session)->first()->id;        
+    $puntos = DB::table('registros')->where('session_id', $getId)->sum('valor');
+    return $puntos;
     return "hola Mundo";
 });
 
-Route::get('session', function () {
-            $session = Session::get('session_id');
-        return $session;
-});
 
+Route::get('session', function () {
+    $session = Session::get('session_id');
+    return $session;
+});

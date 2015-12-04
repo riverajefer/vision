@@ -1,7 +1,26 @@
 @extends('layouts/default')
 @section('content')
+<div id="fb-root"></div>
 
-@section('title')  @parent Hola @stop
+<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="Your Website Title" />
+<meta property="og:description"   content="Your description" />
+<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+
+
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=1557364301219533";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+@section('title')  @parent ERES EXTREME-COOL @stop
 
 	<img src="{{asset('img/extreme.jpg')}}" id="bg" alt="">
 	
@@ -19,6 +38,7 @@
 			<a href="#" >
 				<img src="{{asset('img/vision.png')}}" alt="Visión Mundial" class="img-responsive">
 			</a>
+<div class="fb-share-button" data-href="http://localhost/appvision/public/perfil/autentico" data-layout="button_count"></div>			
 		</div>
 	</div>
 
